@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+./osx_configs
+
 # Install brew
 if ! which brew > /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
