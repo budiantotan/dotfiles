@@ -4,7 +4,7 @@
   signingkey = 851745D505E5AC38
 [core]
   editor = vim
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [diff]
   tool = vscode
 [difftool "meld"]
@@ -26,6 +26,6 @@
 [commit]
   gpgsign = true
 [fetch]
-	prune = true
+  prune = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
