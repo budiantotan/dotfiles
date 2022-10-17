@@ -1,0 +1,31 @@
+[user]
+  email = 22911816+budiantotan@users.noreply.github.com
+  name = Budianto Tan
+  signingkey = 851745D505E5AC38
+[core]
+  editor = vim
+	excludesfile = ~/.gitignore
+[diff]
+  tool = vscode
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args "\"$LOCAL\"" "\"$REMOTE\""
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args "\"$LOCAL\"" "\"$MERGED\"" "\"$REMOTE\"" --output "\"$MERGED\""
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+[branch]
+  autosetuprebase = always
+[gpg]
+  program = gpg
+[commit]
+  gpgsign = true
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main

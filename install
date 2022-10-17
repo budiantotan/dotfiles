@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Install brew
+if ! which brew > /dev/null; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install omz
+if ! which omz > /dev/null; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# Install chezmoi and apply dot files
+brew install chezmoi
+chezmoi init --apply budiantotan
+
+# Brew bundle 
+brew bundle install --file ~/.brewfile
+
+# Clean up
+brew cleanup
+
