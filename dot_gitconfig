@@ -1,7 +1,7 @@
 [user]
   email = 22911816+budiantotan@users.noreply.github.com
   name = Budianto Tan
-  signingkey = 851745D505E5AC38
+  signingkey = B11A2E066AF9B505
 [core]
   editor = vim
   excludesfile = ~/.gitignore
