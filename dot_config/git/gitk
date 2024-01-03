@@ -1,6 +1,6 @@
-set mainfont {{Fira Code} 12}
-set textfont {{Fira Code} 12}
-set uifont {{Fira Code} 12 bold}
+set mainfont {{Fira Code} 14}
+set textfont {{Fira Code} 14}
+set uifont {{Fira Code} 14 bold}
 set tabstop 4
 set findmergefiles 0
 set maxgraphpct 50
@@ -16,18 +16,18 @@ set hideremotes 0
 set showlocalchanges 1
 set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
-set uicolor #474747
+set uicolor #21252b
 set want_ttk 1
-set bgcolor #212121
-set fgcolor #B0BEC5
+set bgcolor #282c34
+set fgcolor #abb2be
 set uifgcolor #B0BEC5
 set uifgdisabledcolor #727272
 set colors {#C3E88D #FF5370 #82AAFF #C792EA #466D94 #AB7967 #F78C6C}
-set diffcolors {#FF5370 #C3E88D #89DDFF}
+set diffcolors {{#e67680} #8bc264 #42b2c1}
 set mergecolors {#FF5370 #C792EA #C3E88D #C792EA #F78C6C #89DDFF #F07178 #FFCB6B #89DDFF #F07178 #89DDFF #F78C6C #89DDFF #C3E88D #F78C6C #F07178}
-set markbgcolor #212121
+set markbgcolor #2b313b
 set diffcontext 5
-set selectbgcolor #606060
+set selectbgcolor #333a46
 set foundbgcolor #466D94
 set currentsearchhitbgcolor #FF9800
 set extdifftool opendiff
@@ -51,14 +51,14 @@ set indexcirclecolor #C3E88D
 set circlecolors {white #89DDFF #9AA7B0 #89DDFF #89DDFF}
 set linkfgcolor #FFCB6B
 set circleoutlinecolor #1A1A1A
-set diffbgcolors {"#fff3f3" "#f0fff0"}
+set diffbgcolors {{#282c33} #282c33}
 set web_browser open
-set geometry(main) 1283x716+5+30
-set geometry(state) normal
-set geometry(topwidth) 1283
+set geometry(main) 1680x958+0+23
+set geometry(state) zoomed
+set geometry(topwidth) 1680
 set geometry(topheight) 242
-set geometry(pwsash0) "951 1"
-set geometry(pwsash1) "1100 1"
-set geometry(botwidth) 853
-set geometry(botheight) 469
+set geometry(pwsash0) "1243 1"
+set geometry(pwsash1) "1439 1"
+set geometry(botwidth) 1109
+set geometry(botheight) 711
 set permviews {}

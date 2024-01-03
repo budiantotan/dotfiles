@@ -22,3 +22,5 @@ brew bundle install --file ~/.brewfile
 # Clean up
 brew cleanup
 
+echo "All done. Restarting..."
+sudo shutdown -r now

@@ -1,4 +1,5 @@
-" Use the Solarized Dark theme
+" Use the One dark theme
+let g:onedark_termcolors=16 
 set background=dark
 colorscheme onedark
 

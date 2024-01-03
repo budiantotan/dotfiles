@@ -3,7 +3,6 @@ tap "homebrew/cask-fonts"
 
 # Brews
 brew "asdf"
-brew "bitwarden-cli"
 brew "chezmoi"
 brew "direnv"
 brew "discord"
@@ -17,31 +16,37 @@ brew "mas"
 brew "pnpm"
 brew "spaceship"
 brew "starship"
+brew "vim"
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
+brew "yarn"
 
 # Casks
+cask "android-studio"
+cask "android-platform-tools"
 cask "appcleaner"
-cask "bitwarden"
+cask "bluesnooze"
 cask "brave-browser"
 cask "ccleaner"
 cask "font-fira-code"
 cask "insomnia"
+cask "itsycal"
 cask "karabiner-elements"
 cask "macmediakeyforwarder"
 cask "meld"
 cask "monitorcontrol"
 cask "notion"
+cask "postman"
 cask "scroll-reverser"
 cask "spectacle"
 cask "spotify"
 cask "the-unarchiver"
 cask "transmission"
+cask "visual-studio-code"
 cask "vlc"
 
 # App store
-mas "Bitwarden", id: 1352778147
-mas "Owly", id: 882812218                                                                           
+mas "Owly", id: 882812218
 mas "Xcode", id: 497799835

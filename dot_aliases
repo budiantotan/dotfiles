@@ -16,7 +16,7 @@ alias hideFiles="defaults write com.apple.finder AppleShowAllFiles -bool false &
 # Lazy alias
 alias c='clear'
 alias x='exit'
+alias y='yarn'
 
 # Open finder in current directory
 alias f='open -a Finder ./'
-

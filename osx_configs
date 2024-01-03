@@ -152,5 +152,4 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # Kill affected applications                                                  #
 ###############################################################################
 
-echo "Done. Restarting..."
-sudo shutdown -r now
+echo "Done setting up macos"
