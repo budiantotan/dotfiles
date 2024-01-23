@@ -70,9 +70,20 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew evalcache git node zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
+plugins=(brew git node)
 
 source $ZSH/oh-my-zsh.sh
+
+# Plugins
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 
 # User configuration
 
@@ -106,6 +117,9 @@ source ~/.aliases
 # Functions
 source ~/.functions
 
+# asdf
+source /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 # Terminal colors
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -122,5 +136,4 @@ export HISTFILESIZE=1000
 eval "$(starship init zsh)"
 
 # dir env
-# eval "$(direnv hook zsh)"
-_evalcache direnv hook zsh
+eval "$(direnv hook zsh)"
