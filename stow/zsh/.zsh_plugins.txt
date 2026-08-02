@@ -1,0 +1,6 @@
+# Replace completion with fzf
+Aloxaf/fzf-tab kind:defer
+
+# Syntax & autosuggestions
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-syntax-highlighting kind:defer
