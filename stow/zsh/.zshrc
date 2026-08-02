@@ -53,3 +53,7 @@ antidote load
 # =============================================================================
 # direnv
 eval "$(direnv hook zsh)"
+
+# Starship Prompt
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+eval "$(starship init zsh)"

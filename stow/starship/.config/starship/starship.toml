@@ -1,0 +1,92 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+palette = 'one_dark_pro_darker'
+right_format = '$time'
+
+[character]
+success_symbol = '[➜](green)'
+error_symbol = '[✗](red)'
+
+[git_status]
+disabled = true
+
+[time]
+disabled = false
+style = 'bold blue'
+format = '[\[$time\]]($style) '
+time_format = '%I:%M %p'
+
+# =============================================================================
+# Symbols, check https://starship.rs/presets/nerd-font for more
+# =============================================================================
+[aws]
+symbol = " "
+
+[direnv]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[gcloud]
+symbol = "󱇶 "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[kubernetes]
+symbol = "󱃾 "
+
+[lua]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[python]
+symbol = " "
+
+[sudo]
+symbol = " "
+
+[terraform]
+symbol = " "
+
+
+# =============================================================================
+# Color palettes
+# =============================================================================
+[palettes.one_dark_pro_darker]
+background = "#23272e"
+surface = "#1e2227"
+darkest = "#181a1f"
+foreground = "#abb2bf"
+comment = "#5c6370"
+muted = "#7f848e"
+red = "#e06c75"
+error = "#c24038"
+orange = "#d19a66"
+yellow = "#e5c07b"
+green = "#98c379"
+cyan = "#56b6c2"
+blue = "#61afef"
+purple = "#c678dd"
