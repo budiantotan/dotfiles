@@ -138,7 +138,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Menubar                                                                     #
 ###############################################################################
 
-# Date format 
+# Date format
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm"
 
 # Always hide the menu bar
@@ -155,7 +155,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -bool true
 
-# Keyboard: Fn key triggers emoji 
+# Keyboard: Fn key triggers emoji
 defaults write com.apple.HIToolbox AppleFnUsageType -int 2
 
 # Keyboard: Set default function keys behavior (1 = Use F1, F2 etc. as standard keys)
@@ -179,7 +179,11 @@ sudo pmset -b displaysleep 10 sleep 15
 ###############################################################################
 
 # Disable indexing
-sudo mdutil -i off / > /dev/null
+sudo mdutil -a -d > /dev/null
+
+# Enable indexing
+# sudo mdutil -a -E
+
 # Erase the current index
 sudo mdutil -E / > /dev/null
 
