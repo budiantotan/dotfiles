@@ -37,9 +37,9 @@ export EDITOR="vim"
 # =============================================================================
 # Sources
 # =============================================================================
-source ~/.config/zsh/aliases.zsh
-source ~/.config/zsh/functions.zsh
-source ~/.config/zsh/completion.zsh
+source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
+source "$XDG_CONFIG_HOME/zsh/functions.zsh"
+source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 
 # Load compinit after completion
 autoload -Uz compinit; compinit
