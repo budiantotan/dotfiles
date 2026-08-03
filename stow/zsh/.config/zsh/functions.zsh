@@ -37,12 +37,12 @@ csv() {
 
 # Get IP info
 ipinfo() {
-  echo "Public IP"
-  curl -fsSL https://ifconfig.me
+    echo "Public IP"
+    curl -fsSL https://ifconfig.me
 
-  echo
-  echo "Private IPv4"
-  ifconfig | awk '
+    echo
+    echo "Private IPv4"
+    ifconfig | awk '
     /^[a-z]/ { iface=$1; sub(":", "", iface) }
     /inet / && $2 != "127.0.0.1" {
       printf "  %-10s %s\n", iface, $2
@@ -52,11 +52,10 @@ ipinfo() {
 
 # Print json in readable format
 print_json() {
-  jq . "$1"
+    jq . "$1"
 }
 
 # Check process port
 port() {
     lsof -i :"$1"
 }
-

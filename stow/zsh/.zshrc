@@ -39,7 +39,8 @@ source "$XDG_CONFIG_HOME/zsh/functions.zsh"
 source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 
 # Load compinit after completion
-autoload -Uz compinit; compinit
+autoload -Uz compinit
+compinit
 
 # =============================================================================
 # Externals
