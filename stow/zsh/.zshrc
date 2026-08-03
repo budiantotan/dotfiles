@@ -42,6 +42,9 @@ source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 autoload -Uz compinit
 compinit
 
+# Connect to dotfiles repo
+source "$DOTFILES/scripts/init.sh"
+
 # =============================================================================
 # Externals
 # =============================================================================
