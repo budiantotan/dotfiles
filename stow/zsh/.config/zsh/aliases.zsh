@@ -51,6 +51,7 @@ alias egrep='egrep --color=auto'
 # Git
 alias g='git'
 alias ga='git add'
+alias gaa='git add --all'
 alias gwip='git commit -m "--wip--" --no-verify'
 alias gb='git branch'
 alias gco='git checkout'
