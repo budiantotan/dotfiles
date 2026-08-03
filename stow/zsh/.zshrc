@@ -3,8 +3,8 @@
 # =============================================================================
 # Shell env defaults
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
-export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
 export DOTFILES="$HOME/dotfiles"
 
 # ZSH directory stack, use d alias
@@ -22,7 +22,7 @@ setopt APPEND_HISTORY
 setopt SHARE_HISTORY
 
 # Default PROMPT
-PROMPT='%F{cyan} %~%f %F{green}❯%f '
+PROMPT='%F{cyan} %~%f %F{%(!.red.green)}➜%f '
 
 # No typing cd everytime
 setopt AUTO_CD
@@ -34,9 +34,6 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # Default editor
 export EDITOR="vim"
 
-# =============================================================================
-# Sources
-# =============================================================================
 source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
 source "$XDG_CONFIG_HOME/zsh/functions.zsh"
 source "$XDG_CONFIG_HOME/zsh/completion.zsh"
@@ -44,16 +41,22 @@ source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 # Load compinit after completion
 autoload -Uz compinit; compinit
 
+# =============================================================================
+# Externals
+# =============================================================================
 # Antidote plugin manager
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
-# =============================================================================
-# Evals
-# =============================================================================
+# FZF
+source <(fzf --zsh)
+
 # direnv
 eval "$(direnv hook zsh)"
 
 # Starship Prompt
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 eval "$(starship init zsh)"
+
+# Mise
+eval "$(mise activate zsh)"

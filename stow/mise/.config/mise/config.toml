@@ -1,0 +1,7 @@
+[settings]
+legacy_version_file = true # support legacy (.tools-version)
+idiomatic_version_file_enable_tools = ["node"]
+always_keep_download = false
+always_keep_install = false
+env_cache = true
+all_compile = true
