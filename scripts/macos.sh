@@ -17,7 +17,7 @@ setup_xcode_select() {
 }
 
 apply_macos_defaults() {
-    local defaults_script="$ROOT/macos/defaults.sh"
+    local defaults_script="$DOTFILES/macos/defaults.sh"
 
     if [[ -f "$defaults_script" ]]; then
         echo "⚙️ Applying macOS defaults..."
