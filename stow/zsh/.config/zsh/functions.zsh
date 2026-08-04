@@ -51,11 +51,10 @@ ipinfo() {
 }
 
 # Print json in readable format
-print_json() {
-    jq . "$1"
-}
+print_json() { jq . "$1"; }
 
 # Check process port
-port() {
-    lsof -i :"$1"
-}
+port() { lsof -i :"$1"; }
+
+# md & cd into it
+mkd() { mkdir -p "$@" && cd "$@"; }

@@ -11,13 +11,14 @@ setup_xcode_select() {
         done
 
         echo "✅ Xcode Command Line Tools installed."
+        return
     fi
 
     echo "✅ Xcode Command Line Tools already installed. Skipping."
 }
 
 apply_macos_defaults() {
-    local defaults_script="$DOTFILES/macos/defaults.sh"
+    local defaults_script="$DOTFILES/macos/set_defaults.sh"
 
     if [[ -f "$defaults_script" ]]; then
         echo "⚙️ Applying macOS defaults..."

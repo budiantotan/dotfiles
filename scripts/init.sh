@@ -2,9 +2,9 @@
 export DOTFILES="$HOME/dotfiles"
 
 if [ ! -f "$DOTFILES/.env" ]; then
-  echo "Warn: dotfiles .env not found."
+    echo "Warn: dotfiles .env not found."
+else
+    source "$DOTFILES/.env"
 fi
-
-source "$DOTFILES/.env"
 
 # TODO: Add dotfile specific functions here

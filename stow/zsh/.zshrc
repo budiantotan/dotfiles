@@ -5,7 +5,6 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export DOTFILES="$HOME/dotfiles"
 
 # ZSH directory stack, use d alias
 setopt AUTO_PUSHD
@@ -49,6 +48,7 @@ source "$DOTFILES/scripts/init.sh"
 # Externals
 # =============================================================================
 # Antidote plugin manager
+export ANTIDOTE_HOME="$XDG_CACHE_HOME/antidote"
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
@@ -64,3 +64,9 @@ eval "$(starship init zsh)"
 
 # Mise
 eval "$(mise activate zsh)"
+
+# =============================================================================
+# Paths
+# =============================================================================
+# Use GNU coreutils
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"

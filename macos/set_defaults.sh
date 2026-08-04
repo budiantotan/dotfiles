@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Inspired from https://mths.be/macos & https://macos-defaults.com
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -7,7 +9,11 @@ osascript -e 'tell application "System Preferences" to quit'
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until script has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
+done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -41,7 +47,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desk
 defaults write com.apple.Terminal NSQuitAlwaysKeepsWindows -bool false
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2>/dev/null
 
 # Disable automatic capitalization
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -179,13 +185,13 @@ sudo pmset -b displaysleep 10 sleep 15
 ###############################################################################
 
 # Disable indexing
-sudo mdutil -a -d > /dev/null
+sudo mdutil -a -d >/dev/null
 
 # Enable indexing
 # sudo mdutil -a -E
 
 # Erase the current index
-sudo mdutil -E / > /dev/null
+sudo mdutil -E / >/dev/null
 
 ###############################################################################
 # Terminal                                                                    #
@@ -274,7 +280,6 @@ for app in \
     "Photos" \
     "SystemUIServer" \
     "Terminal" \
-    "WindowManager"
-do
+    "WindowManager"; do
     killall "$app" >/dev/null 2>&1 || true
 done
