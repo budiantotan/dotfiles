@@ -1,0 +1,28 @@
+scripts/init.sh
+  h_0ad19c986b5299 6-7
+scripts/brew.sh
+  h_0ad19c986b5299 8
+install.sh
+  h_0ad19c986b5299 2
+stow/zsh/.config/zsh/aliases.zsh
+  h_0ad19c986b5299 27-28,68,72
+stow/zsh/.zshrc
+  h_0ad19c986b5299 51,67-72
+macos/set_defaults.sh
+  h_0ad19c986b5299 1-2,283
+stow/zsh/.config/zsh/functions.zsh
+  h_0ad19c986b5299 54,57-60
+scripts/macos.sh
+  h_0ad19c986b5299 14,21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "2c25b597415d9263b414614524dc17834db357a4",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
