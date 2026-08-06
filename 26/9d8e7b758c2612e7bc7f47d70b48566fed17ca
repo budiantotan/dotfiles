@@ -1,0 +1,36 @@
+profiles/common/packages.list
+  s_9aed25d68c7432::t_c2f038b128f78e 1-8
+scripts/packages.sh
+  s_9aed25d68c7432::t_6516b34a8e9900 1-62
+scripts/bootstrap.sh
+  s_9aed25d68c7432::t_32e494dd9caa4c 6,10,21,28,39-73,75-78
+scripts/cli.sh
+  s_9aed25d68c7432::t_2cfc8927639d52 1-94
+profiles/personal/packages.list
+  s_9aed25d68c7432::t_c2f038b128f78e 1
+profiles/work/Brewfile
+  h_0ad19c986b5299 1-97
+scripts/init.sh
+  s_9aed25d68c7432::t_cb447cf47534f4 1-2,12-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "269d8e7b758c2612e7bc7f47d70b48566fed17ca",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_9aed25d68c7432": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c99e6b73-9e49-419e-ac0d-62eef0c3b647",
+        "model": "gemini-3.1-pro-preview"
+      },
+      "human_author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
