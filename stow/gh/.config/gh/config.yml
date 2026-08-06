@@ -6,7 +6,7 @@ aliases:
     search-merged: search prs --merged --author @me
     pr list-open: pr list --author "@me"
     pr list-merged: pr list --state merged --author "@me"
-    get-release-tag: |
+    pr release-tag: |
         !f() {
             local hash=$(gh pr view "$1" --json mergeCommit --jq '.mergeCommit.oid')
 
