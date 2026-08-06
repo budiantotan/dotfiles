@@ -1,0 +1,14 @@
+stow/gh/.config/gh/config.yml
+  h_0ad19c986b5299 9,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "a1739b9fb4538a72e07cd9a6cb037b1067cc2ba7",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
