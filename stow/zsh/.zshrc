@@ -23,10 +23,11 @@ setopt SHARE_HISTORY
 # Default PROMPT
 PROMPT='%F{cyan} %~%f %F{%(!.red.green)}➜%f '
 
-# No typing cd everytime
+# No typing cd every time
 setopt AUTO_CD
 
 # Terminal colors
+# TODO: REMOVE since used gnu ls, create one dark colors in colors.zsh
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
@@ -39,7 +40,7 @@ source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 
 # Load compinit after completion
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME/zcompdump"
 
 # Connect to dotfiles repo
 source "$DOTFILES/scripts/init.sh"
