@@ -20,12 +20,15 @@ setopt HIST_IGNORE_SPACE
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY
 
-# Default PROMPT
-PROMPT='%F{cyan} %~%f %F{%(!.red.green)}➜%f '
-
 # No typing cd every time
 setopt AUTO_CD
 
+# Default PROMPT (fallback if starship fails)
+PROMPT='%F{cyan} %~%f %F{%(!.red.green)}➜%f '
+
+# =============================================================================
+# Exports
+# =============================================================================
 # Terminal colors
 # TODO: REMOVE since used gnu ls, create one dark colors in colors.zsh
 export CLICOLOR=1
@@ -34,6 +37,12 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # Default editor
 export EDITOR="vim"
 
+# Brew prefix
+export BREW_PREFIX=$(brew --prefix)
+
+# =============================================================================
+# ZSH Functions
+# =============================================================================
 source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
 source "$XDG_CONFIG_HOME/zsh/functions.zsh"
 source "$XDG_CONFIG_HOME/zsh/completion.zsh"
@@ -46,11 +55,11 @@ compinit -d "$XDG_CACHE_HOME/zcompdump"
 source "$DOTFILES/scripts/init.sh"
 
 # =============================================================================
-# Externals
+# Externals / Plugins
 # =============================================================================
 # Antidote plugin manager
 export ANTIDOTE_HOME="$XDG_CACHE_HOME/antidote"
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+source $BREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 # FZF
@@ -70,4 +79,4 @@ eval "$(mise activate zsh)"
 # Paths
 # =============================================================================
 # Use GNU coreutils
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export PATH="$BREW_PREFIX/libexec/gnubin:$PATH"

@@ -1,3 +1,8 @@
+clear_completion_cache() {
+    rm -rf "$XDG_CACHE_HOME/zsh/completion/*"
+    rm -f "$XDG_CACHE_HOME/zcompdump*"
+}
+
 # Archive with sevenzip
 archive() {
     if [ -z "$1" ]; then
