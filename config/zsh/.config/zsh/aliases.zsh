@@ -37,13 +37,14 @@ alias 7='cd +7'
 alias 8='cd +8'
 alias 9='cd +9'
 
-# ls
-alias ls='ls --color=auto'
-alias l='ls -l'
-alias ll='ls -lahF'
-alias lls='ls -lahFtr'
-alias la='ls -A'
-alias lc='ls -CF'
+# Use bat
+alias cat='bat'
+
+# ls with eza
+alias ls='eza'
+alias lsa='eza -A'
+alias lst='eza -lahF'
+alias tree='eza --tree'
 
 # Grep
 alias grep='grep --color=auto'

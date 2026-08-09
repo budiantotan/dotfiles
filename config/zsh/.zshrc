@@ -1,11 +1,6 @@
 # =============================================================================
-# Shell & ZSH Defaults
+# ZSH Defaults
 # =============================================================================
-# Shell env defaults
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-
 # ZSH directory stack, use d alias
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
@@ -37,9 +32,6 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # Default editor
 export EDITOR="vim"
 
-# Brew prefix
-export BREW_PREFIX=$(brew --prefix)
-
 # =============================================================================
 # ZSH Functions
 # =============================================================================
@@ -54,12 +46,17 @@ compinit -d "$XDG_CACHE_HOME/zcompdump"
 # =============================================================================
 # Externals / Plugins
 # =============================================================================
+# Brew
+source "$XDG_CONFIG_HOME/brew/env.zsh"
+export BREW_PREFIX=$(brew --prefix)
+
 # Antidote plugin manager
 export ANTIDOTE_HOME="$XDG_CACHE_HOME/antidote"
 source $BREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 # FZF
+source "$XDG_CONFIG_HOME/fzf/config.zsh"
 source <(fzf --zsh)
 
 # direnv
@@ -70,6 +67,9 @@ eval "$(starship init zsh)"
 
 # Mise
 eval "$(mise activate zsh)"
+
+# zoxide (to replace with CD??)
+eval "$(zoxide init zsh)"
 
 # =============================================================================
 # Paths

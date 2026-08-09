@@ -1,0 +1,4 @@
+# Homebrew Hardened Security Configurations
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_ASK_FOR_DEPENDENCY_PLAN=1
