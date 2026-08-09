@@ -51,9 +51,6 @@ source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME/zcompdump"
 
-# Connect to dotfiles repo
-source "$DOTFILES/scripts/init.sh"
-
 # =============================================================================
 # Externals / Plugins
 # =============================================================================
@@ -69,7 +66,6 @@ source <(fzf --zsh)
 eval "$(direnv hook zsh)"
 
 # Starship Prompt
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 eval "$(starship init zsh)"
 
 # Mise
