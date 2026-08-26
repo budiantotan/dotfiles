@@ -140,6 +140,9 @@ defaults write com.apple.dock "expose-group-apps" -bool false
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Group apps by window
+defaults write com.apple.dock expose-group-apps -bool true
+
 ###############################################################################
 # Menubar                                                                     #
 ###############################################################################
@@ -179,19 +182,6 @@ sudo pmset -c displaysleep 0 sleep 0
 
 # Set machine sleep to 5 minutes on battery
 sudo pmset -b displaysleep 10 sleep 15
-
-###############################################################################
-# Spotlight                                                                   #
-###############################################################################
-
-# Disable indexing
-sudo mdutil -a -d >/dev/null
-
-# Enable indexing
-# sudo mdutil -a -E
-
-# Erase the current index
-sudo mdutil -E / >/dev/null
 
 ###############################################################################
 # Terminal                                                                    #

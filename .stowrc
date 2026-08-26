@@ -1,0 +1,3 @@
+--target=~
+--dir=./config
+--ignore=DS_Store
