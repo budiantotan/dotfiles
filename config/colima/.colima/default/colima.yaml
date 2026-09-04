@@ -1,0 +1,12 @@
+cpu: 2
+memory: 4
+disk: 60
+arch: aarch64
+vmType: vz
+rosetta: true
+mountType: virtiofs
+kubernetes:
+    enabled: false
+docker:
+    features:
+        buildkit: true
