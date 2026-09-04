@@ -1,0 +1,22 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "9d6f4d3caf57197e2d980ed21d755341956c3a96",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_9aed25d68c7432": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c99e6b73-9e49-419e-ac0d-62eef0c3b647",
+        "model": "gemini-3.1-pro-preview"
+      },
+      "human_author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
