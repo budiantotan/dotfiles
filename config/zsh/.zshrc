@@ -22,15 +22,15 @@ setopt AUTO_CD
 PROMPT='%F{cyan} %~%f %F{%(!.red.green)}➜%f '
 
 # =============================================================================
-# Exports
+# Default exports
 # =============================================================================
-# Terminal colors
-# TODO: REMOVE since used gnu ls, create one dark colors in colors.zsh
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-
 # Default editor
 export EDITOR="vim"
+export VISUAL="vim"
+
+# Better performance
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
 
 # =============================================================================
 # ZSH Functions
@@ -39,9 +39,15 @@ source "$XDG_CONFIG_HOME/zsh/aliases.zsh"
 source "$XDG_CONFIG_HOME/zsh/functions.zsh"
 source "$XDG_CONFIG_HOME/zsh/completion.zsh"
 
-# Load compinit after completion
+# Load compinit after completion, skip full rescan if dump is <24h old
 autoload -Uz compinit
-compinit -d "$XDG_CACHE_HOME/zcompdump"
+local zcompdump="$XDG_CACHE_HOME/zcompdump"
+if [[ ! -f "$zcompdump" || -n "$zcompdump"(#qN.mh+24) ]]; then
+    compinit -d "$zcompdump"
+    { zcompile "$zcompdump"; } &|
+else
+    compinit -C -d "$zcompdump"
+fi
 
 # =============================================================================
 # Externals / Plugins
