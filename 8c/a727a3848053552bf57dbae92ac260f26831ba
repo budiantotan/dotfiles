@@ -1,0 +1,16 @@
+macos/Brewfile
+  h_0ad19c986b5299 9,13-15,24,26-27,32,46
+config/colima/.colima/default/colima.yaml
+  h_0ad19c986b5299 1-12
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "8ca727a3848053552bf57dbae92ac260f26831ba",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
