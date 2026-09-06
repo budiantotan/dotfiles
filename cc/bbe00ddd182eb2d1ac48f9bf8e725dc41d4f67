@@ -1,0 +1,14 @@
+macos/Brewfile
+  h_0ad19c986b5299 9,13-15,24,26-27,32,46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "ccbbe00ddd182eb2d1ac48f9bf8e725dc41d4f67",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
