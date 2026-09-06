@@ -1,0 +1,16 @@
+macos/Brewfile
+  h_0ad19c986b5299 42
+config/zsh/.zsh_plugins.txt
+  h_0ad19c986b5299 2-4,6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "0d2a53f3c3995e946a1e9665c3636df24cc9eb3f",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
