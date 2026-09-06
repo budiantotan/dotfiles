@@ -1,0 +1,26 @@
+config/zsh/.zshrc
+  s_3538d7dc689fb7::t_74d2bced703c19 29
+  s_3538d7dc689fb7::t_7619ecbd4b4070 42,46,48-50
+  h_0ad19c986b5299 25,31-33,44-45,47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "d22be835dedcfe2fdcd60ce9b89412d9ed91e04c",
+  "prompts": {},
+  "humans": {
+    "h_0ad19c986b5299": {
+      "author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_3538d7dc689fb7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "3cdde062-c16f-46a4-b3fd-a5376ecc8a64",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "budiantotan <22911816+budiantotan@users.noreply.github.com>"
+    }
+  }
+}
