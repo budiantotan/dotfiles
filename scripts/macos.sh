@@ -1,4 +1,4 @@
-setup_xcode_select() {
+setup_prerequisites() {
     if ! xcode-select -p >/dev/null 2>&1; then
         echo "⚙️ Installing Xcode Command Line Tools..."
 
@@ -12,9 +12,17 @@ setup_xcode_select() {
 
         echo "✅ Xcode Command Line Tools installed."
         return
+    else
+        echo "✅ Xcode Command Line Tools already installed. Skipping."
     fi
 
-    echo "✅ Xcode Command Line Tools already installed. Skipping."
+    if ! pkgutil --pkg-info=com.apple.pkg.RosettaUpdateAuto >/dev/null 2>&1; then
+        echo "⚙️ Installing Rosetta..."
+        sudo softwareupdate --install-rosetta --agree-to-license
+        echo "✅ Rosetta installed."
+    else
+        echo "✅ Rosetta already installed. Skipping."
+    fi
 }
 
 apply_macos_defaults() {
@@ -31,5 +39,3 @@ apply_macos_defaults() {
 
     echo "❌ Error: macOS defaults not found. Skipping."
 }
-
-# add discover defaults script here
