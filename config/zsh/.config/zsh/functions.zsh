@@ -62,4 +62,10 @@ print_json() { jq . "$1"; }
 port() { lsof -i :"$1"; }
 
 # md & cd into it
-mkd() { mkdir -p "$@" && cd "$@"; }
+mkd() { mkdir -p "$1" && cd "$1"; }
+
+# md & touch file then cd to it
+mkfile() {
+    local dir=$(dirname "$1")
+    mkdir -p -- "$dir" && touch -- "$1" && cd -- "$dir"
+}
