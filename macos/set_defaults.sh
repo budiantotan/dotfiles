@@ -22,6 +22,9 @@ done 2>/dev/null &
 # Set liquid glass to tinted
 defaults write -g NSGlassDiffusionSetting -int 1
 
+# Reduce transparency
+defaults write com.apple.universalaccess reduceTransparency -bool true
+
 # Enable dragging window with cmd key
 defaults write -g NSWindowShouldDragOnGesture -bool true
 
