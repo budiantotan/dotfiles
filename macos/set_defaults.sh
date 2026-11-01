@@ -112,6 +112,9 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+# Displays have different spaces
+defaults write com.apple.spaces "spans-displays" -bool true
+
 ###############################################################################
 # Dock                                                                        #
 ###############################################################################
