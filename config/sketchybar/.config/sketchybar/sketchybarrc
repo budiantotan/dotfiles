@@ -1,0 +1,23 @@
+#!/bin/bash
+# Fallback, as brew services runs without these
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+# Define the expected path for the compiled SbarLua C binary
+SBAR_BINARY="$XDG_DATA_HOME/sketchybar_lua/sketchybar.so"
+
+# Verification and compilation phase
+if [ ! -f "$SBAR_BINARY" ]; then
+    echo "SbarLua not found, compiling..."
+
+    # Compile, install, and clean up temporary directory assets
+    git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua &&
+        cd /tmp/SbarLua/ &&
+        make install &&
+        rm -rf /tmp/SbarLua/
+
+    echo "SbarLua successfully compiled! Starting configuration..."
+fi
+
+# Hand off control to the Lua runtime safely using "exec"
+exec lua "$XDG_CONFIG_HOME/sketchybar/init.lua"
